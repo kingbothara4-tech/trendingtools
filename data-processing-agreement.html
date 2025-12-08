@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Processing Agreement - TrendingTools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --glow: rgba(99, 102, 241, 0.5);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 25px 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .legal-header {
+            text-align: center;
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .legal-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .light-effect {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .light-effect-2 {
+            left: -250px;
+            bottom: -250px;
+            top: auto;
+            right: auto;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
+        }
+
+        .legal-content {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 50px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .legal-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+
+        .legal-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 15px 0 15px 30px;
+            color: var(--gray);
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+        }
+
+        .important-box {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .definition-box {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .definition-box dt {
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .definition-box dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .legal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tools"></i>
+                <span>TrendingTools</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="light-effect"></div>
+        <div class="light-effect light-effect-2"></div>
+        
+        <section class="legal-header">
+            <div class="container">
+                <h1>Data Processing Agreement</h1>
+                <p>Last Updated: December 2025</p>
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </section>
+
+        <section class="legal-content container">
+            <div class="legal-section">
+                <h2>Introduction</h2>
+                <p>This Data Processing Agreement ("DPA") forms part of the Terms of Service between you ("Data Controller") and TrendingTools ("Data Processor"). This DPA reflects the parties' agreement with regard to the processing of personal data in accordance with the requirements of data protection laws, including the GDPR.</p>
+                
+                <div class="important-box">
+                    <p><strong>Important Notice:</strong> TrendingTools is designed as a client-side application. All data processing occurs locally in your browser. We do not collect, store, or process personal data on our servers. This DPA is provided for transparency and compliance purposes.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Definitions</h2>
+                <div class="definition-box">
+                    <dl>
+                        <dt>Controller</dt>
+                        <dd>The natural or legal person, public authority, agency, or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data.</dd>
+                        
+                        <dt>Processor</dt>
+                        <dd>A natural or legal person, public authority, agency, or other body which processes personal data on behalf of the controller.</dd>
+                        
+                        <dt>Personal Data</dt>
+                        <dd>Any information relating to an identified or identifiable natural person.</dd>
+                        
+                        <dt>Processing</dt>
+                        <dd>Any operation or set of operations performed on personal data.</dd>
+                        
+                        <dt>Data Subject</dt>
+                        <dd>The individual to whom personal data relates.</dd>
+                        
+                        <dt>GDPR</dt>
+                        <dd>General Data Protection Regulation (EU) 2016/679.</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Scope and Purpose</h2>
+                <p>This DPA applies to all processing of personal data by TrendingTools on behalf of the Data Controller in connection with the Services provided under the Terms of Service.</p>
+                
+                <h3>Nature and Purpose of Processing</h3>
+                <p>TrendingTools provides client-side tools that process data locally in the user's browser. The purpose of processing is to enable the functionality of our tools, including:</p>
+                <ul>
+                    <li>Text manipulation and conversion</li>
+                    <li>Password generation</li>
+                    <li>Unit conversion calculations</li>
+                    <li>QR code generation</li>
+                    <li>Color processing and conversion</li>
+                    <li>Mathematical calculations</li>
+                    <li>Image editing operations</li>
+                    <li>Text analysis and counting</li>
+                    <li>Data encoding and decoding</li>
+                    <li>JSON formatting and validation</li>
+                </ul>
+                
+                <h3>Types of Personal Data</h3>
+                <p>Since all processing occurs client-side, TrendingTools does not have access to or process personal data. Any personal data processed through our tools remains on the Data Controller's device.</p>
+                
+                <h3>Categories of Data Subjects</h3>
+                <p>Data subjects may include:</p>
+                <ul>
+                    <li>End users of the Data Controller's services</li>
+                    <li>Employees or contractors of the Data Controller</li>
+                    <li>Any individual whose data is processed through our tools</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Data Processing Details</h2>
+                
+                <h3>Duration of Processing</h3>
+                <p>Processing occurs only during the active use of our tools. No data is stored or retained after the processing session ends.</p>
+                
+                <h3>Location of Processing</h3>
+                <p>All data processing occurs locally in the user's web browser. No data is transmitted to our servers or any third-party servers.</p>
+                
+                <h3>Subprocessors</h3>
+                <p>TrendingTools does not use any subprocessors for data processing. However, we rely on the following third-party services for website functionality:</p>
+                <ul>
+                    <li><strong>GitHub Pages:</strong> Website hosting (may see IP addresses for security purposes)</li>
+                    <li><strong>Google Fonts:</strong> Font delivery service</li>
+                    <li><strong>Font Awesome:</strong> Icon delivery service</li>
+                </ul>
+                <p>These services do not process personal data from our tools.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Obligations of the Processor</h2>
+                
+                <h3>Processing Instructions</h3>
+                <p>TrendingTools will process personal data only in accordance with documented instructions from the Controller, unless required to do so by applicable law.</p>
+                
+                <h3>Confidentiality</h3>
+                <p>TrendingTools ensures that persons authorized to process personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality.</p>
+                
+                <h3>Security Measures</h3>
+                <p>TrendingTools implements appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including:</p>
+                <ul>
+                    <li>Client-side encryption where applicable</li>
+                    <li>Secure coding practices</li>
+                    <li>Regular security reviews</li>
+                    <li>HTTPS encryption for all communications</li>
+                </ul>
+                
+                <h3>Assistance to Controller</h3>
+                <p>Taking into account the nature of processing and the information available, TrendingTools will assist the Controller in:</p>
+                <ul>
+                    <li>Responding to data subject requests</li>
+                    <li>Ensuring compliance with security obligations</li>
+                    <li>Conducting data protection impact assessments</li>
+                    <li>Reporting personal data breaches</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Data Subject Rights</h2>
+                <p>Since TrendingTools does not store personal data, data subject rights are exercised through the Data Controller. TrendingTools will provide reasonable assistance to the Controller in fulfilling their obligations to respond to data subject requests.</p>
+                
+                <p>Data subjects may exercise their rights under GDPR, including:</p>
+                <ul>
+                    <li>Right of access</li>
+                    <li>Right to rectification</li>
+                    <li>Right to erasure ("right to be forgotten")</li>
+                    <li>Right to restriction of processing</li>
+                    <li>Right to data portability</li>
+                    <li>Right to object</li>
+                    <li>Rights related to automated decision making and profiling</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Data Transfers</h2>
+                <p>TrendingTools does not transfer personal data across borders. All processing occurs locally in the user's browser.</p>
+                
+                <p>If any data transfer occurs in the future, TrendingTools will ensure that appropriate safeguards are in place, such as:</p>
+                <ul>
+                    <li>EU Standard Contractual Clauses</li>
+                    <li>Adequacy decisions</li>
+                    <li>Binding Corporate Rules</li>
+                    <li>Approved codes of conduct or certification mechanisms</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Security Breach Notification</h2>
+                <p>In the event of a personal data breach, TrendingTools will notify the Controller without undue delay after becoming aware of the breach. The notification will include:</p>
+                <ol>
+                    <li>A description of the nature of the breach</li>
+                    <li>The categories and approximate number of data subjects concerned</li>
+                    <li>The categories and approximate number of personal data records concerned</li>
+                    <li>The name and contact details of the data protection officer or other contact point</li>
+                    <li>A description of the likely consequences of the breach</li>
+                    <li>A description of the measures taken or proposed to address the breach</li>
+                </ol>
+            </div>
+
+            <div class="legal-section">
+                <h2>Audit Rights</h2>
+                <p>The Controller has the right to conduct audits to verify TrendingTools' compliance with this DPA. Audits will be conducted:</p>
+                <ul>
+                    <li>With reasonable advance notice</li>
+                    <li>During normal business hours</li>
+                    <li>Without unreasonably disrupting TrendingTools' operations</li>
+                    <li>Subject to reasonable confidentiality obligations</li>
+                </ul>
+                
+                <p>TrendingTools will make available to the Controller all information necessary to demonstrate compliance with the obligations in this DPA.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Deletion or Return of Data</h2>
+                <p>Since TrendingTools does not store personal data, there is no data to delete or return at the end of the processing relationship.</p>
+                
+                <p>Upon termination of the Services, TrendingTools will delete any residual data (if any exists) in accordance with its data retention policies and applicable law.</p>
+            </div>
+
+            <div class="important-box">
+                <h3>Important Clarification</h3>
+                <p>This DPA is provided for compliance purposes. In practice, TrendingTools operates as a client-side application where:</p>
+                <ul>
+                    <li>All data processing occurs locally in the user's browser</li>
+                    <li>No personal data is transmitted to our servers</li>
+                    <li>No personal data is stored by TrendingTools</li>
+                    <li>The Data Controller retains full control over all data</li>
+                </ul>
+                <p>The primary responsibility for data protection remains with the Data Controller, who determines what data is processed through our tools.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Governing Law and Jurisdiction</h2>
+                <p>This DPA shall be governed by and construed in accordance with the laws specified in the Terms of Service. Any disputes arising from this DPA shall be resolved in accordance with the dispute resolution provisions of the Terms of Service.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Changes to This DPA</h2>
+                <p>We may update this DPA from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.</p>
+                
+                <p>We encourage you to review this DPA frequently to be informed of how we are protecting your information and ensuring compliance with data protection regulations.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Contact Information</h2>
+                <p>For questions about this DPA or data protection matters, please contact us through our <a href="contact-us
