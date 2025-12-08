@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright Information - TrendingTools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --glow: rgba(99, 102, 241, 0.5);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 25px 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .legal-header {
+            text-align: center;
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .legal-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .light-effect {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .light-effect-2 {
+            left: -250px;
+            bottom: -250px;
+            top: auto;
+            right: auto;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
+        }
+
+        .legal-content {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 50px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .legal-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+
+        .legal-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 15px 0 15px 30px;
+            color: var(--gray);
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+        }
+
+        .copyright-box {
+            background: rgba(15, 23, 42, 0.7);
+            border: 2px solid var(--primary);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .license-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .notice-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .legal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tools"></i>
+                <span>TrendingTools</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="light-effect"></div>
+        <div class="light-effect light-effect-2"></div>
+        
+        <section class="legal-header">
+            <div class="container">
+                <h1>Copyright Information</h1>
+                <p>Last Updated: December 2025</p>
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </section>
+
+        <section class="legal-content container">
+            <div class="legal-section">
+                <h2>Copyright Notice</h2>
+                <div class="copyright-box">
+                    <p>© 2025 TrendingTools. All rights reserved.</p>
+                    <p>The content, organization, graphics, design, compilation, magnetic translation, digital conversion, and other matters related to the Site are protected under applicable copyrights, trademarks, and other proprietary rights.</p>
+                    <p>The copying, redistribution, use, or publication by you of any such matters or any part of the Site, except as allowed by this Copyright Information, is strictly prohibited.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Ownership of Content</h2>
+                <p>All content included on this website, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of TrendingTools or its content suppliers and protected by international copyright laws.</p>
+                
+                <h3>Specifically Protected Elements</h3>
+                <ul>
+                    <li><strong>Website Design:</strong> The overall design, layout, and user interface of TrendingTools</li>
+                    <li><strong>Tool Algorithms:</strong> The JavaScript code and algorithms powering our 10 tools</li>
+                    <li><strong>Graphics and Icons:</strong> Custom graphics, icons, and visual elements (excluding Font Awesome icons)</li>
+                    <li><strong>Written Content:</strong> All textual content including tool descriptions, documentation, and legal pages</li>
+                    <li><strong>Brand Elements:</strong> The "TrendingTools" name, logo, and branding elements</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Third-Party Content</h2>
+                <p>Certain content on this website may be owned by or licensed to us by third parties. This includes:</p>
+                
+                <h3>Font Awesome Icons</h3>
+                <p>Icons are provided by Font Awesome and are used under their license. Font Awesome icons are licensed under the Font Awesome Free License.</p>
+                
+                <h3>Google Fonts</h3>
+                <p>Typography is provided by Google Fonts. All fonts are open source and licensed under the Open Font License.</p>
+                
+                <h3>Open Source Libraries</h3>
+                <p>We may use open source libraries in our tools. These are used in compliance with their respective licenses.</p>
+                
+                <div class="notice-box">
+                    <p><strong>Attribution:</strong> All third-party content is used in compliance with their respective licenses. Where required, proper attribution is provided.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Permitted Use</h2>
+                <p>You are granted a limited, non-exclusive, non-transferable license to access and use the Site for personal, non-commercial purposes. This license allows you to:</p>
+                <ul>
+                    <li>Access and use all tools for personal purposes</li>
+                    <li>Print or download one copy of any content for personal, non-commercial use</li>
+                    <li>Share links to our tools with others</li>
+                    <li>Use tools in accordance with their intended purpose</li>
+                </ul>
+                
+                <p>This license does <strong>not</strong> include any rights to:</p>
+                <ul>
+                    <li>Modify or copy the materials</li>
+                    <li>Use the materials for any commercial purpose</li>
+                    <li>Attempt to decompile or reverse engineer any software contained on the Site</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>User-Generated Content</h2>
+                <p>Since TrendingTools operates entirely client-side, any content you process through our tools (text, images, data, etc.) remains on your device. We claim no copyright over user-provided content.</p>
+                
+                <p>However, by using our tools, you grant us a non-exclusive, worldwide, royalty-free license to process your content solely for the purpose of providing the tool functionality. This license terminates when you stop using the tool.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>DMCA Compliance</h2>
+                <p>TrendingTools respects the intellectual property rights of others and expects its users to do the same. In accordance with the Digital Millennium Copyright Act (DMCA), we will respond promptly to claims of copyright infringement committed using our Service.</p>
+                
+                <h3>Reporting Copyright Infringement</h3>
+                <p>If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible through our Service, please notify our copyright agent as set forth in the DMCA.</p>
+                
+                <p>Your notice must include the following information:</p>
+                <ol>
+                    <li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed</li>
+                    <li>Identification of the copyrighted work claimed to have been infringed</li>
+                    <li>Identification of the material that is claimed to be infringing and information reasonably sufficient to permit us to locate the material</li>
+                    <li>Your contact information, including address, telephone number, and email address</li>
+                    <li>A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law</li>
+                    <li>A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the owner of an exclusive right that is allegedly infringed</li>
+                </ol>
+                
+                <p>Please send DMCA notices to our designated agent through our <a href="contact-us.html">Contact Us</a> page with "DMCA Notice" in the subject line.</p>
+            </div>
+
+            <div class="license-box">
+                <h3>Open Source Components</h3>
+                <p>Some components of TrendingTools may be released under open source licenses. Where applicable, source code will be made available in compliance with the relevant licenses.</p>
+                
+                <p>If you're interested in contributing to or modifying our code, please contact us to discuss licensing options.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Trademark Information</h2>
+                <p>"TrendingTools" and the TrendingTools logo are trademarks of TrendingTools. You may not use these trademarks without our prior written permission.</p>
+                
+                <p>All other trademarks, service marks, and logos used on this Site are the trademarks, service marks, or logos of their respective owners.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Copyright Duration</h2>
+                <p>Copyright protection for works created by TrendingTools begins from the moment of creation and extends for the duration of the author's life plus 70 years, in accordance with international copyright conventions.</p>
+                
+                <p>For works made for hire, anonymous, or pseudonymous works, copyright protection lasts for 95 years from publication or 120 years from creation, whichever is shorter.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>International Copyright</h2>
+                <p>TrendingTools content is protected by copyright laws in the United States and internationally. We comply with:</p>
+                <ul>
+                    <li>Berne Convention for the Protection of Literary and Artistic Works</li>
+                    <li>World Intellectual Property Organization (WIPO) Copyright Treaty</li>
+                    <li>Digital Millennium Copyright Act (DMCA)</li>
+                    <li>Other applicable international copyright agreements</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Changes to Copyright Information</h2>
+                <p>We may update our Copyright Information from time to time. We will notify you of any changes by posting the new Copyright Information on this page.</p>
+                
+                <p>You are advised to review this Copyright Information periodically for any changes. Changes to this Copyright Information are effective when they are posted on this page.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Contact Information</h2>
+                <p>For copyright-related inquiries, please contact us through our <a href="contact-us.html">Contact Us</a> page with "Copyright Inquiry" in the subject line.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TrendingTools</h3>
+                    <p>A collection of 10 essential free online tools that work directly in your browser. No accounts required, no data stored, completely private.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="acceptable-use-policy.html">Acceptable Use Policy</a></li>
+                        <li><a href="copyright-information.html">Copyright Information</a></li>
+                        <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>All Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#text-case">Text Case Converter</a></li>
+                        <li><a href="index.html#password-generator">Password Generator</a></li>
+                        <li><a href="index.html#unit-converter">Unit Converter</a></li>
+                        <li><a href="index.html#qr-generator">QR Code Generator</a></li>
+                        <li><a href="index.html#color-picker">Color Picker</a></li>
+                        <li><a href="index.html#calculator">Advanced Calculator</a></li>
+                        <li><a href="index.html#image-editor">Image Editor</a></li>
+                        <li><a href="index.html#word-counter">Word Counter</a></li>
+                        <li><a href="index.html#base64-converter">Base64 Converter</a></li>
+                        <li><a href="index.html#json-formatter">JSON Formatter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 TrendingTools. All rights reserved. | This site is free to use and does not collect or store any user data.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.copyright p');
+            copyrightElements.forEach(el => {
+                el.innerHTML = el.innerHTML.replace('2025', year);
+            });
+            
+            // Update copyright notice
+            const copyrightNotice = document.querySelector('.copyright-box p');
+            if (copyrightNotice) {
+                copyrightNotice.innerHTML = copyrightNotice.innerHTML.replace('2025', year);
+            }
+        });
+    </script>
+</body>
+</html>
