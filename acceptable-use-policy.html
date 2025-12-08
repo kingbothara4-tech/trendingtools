@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceptable Use Policy - TrendingTools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --glow: rgba(99, 102, 241, 0.5);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 25px 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .legal-header {
+            text-align: center;
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .legal-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .light-effect {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .light-effect-2 {
+            left: -250px;
+            bottom: -250px;
+            top: auto;
+            right: auto;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
+        }
+
+        .legal-content {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 50px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .legal-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+
+        .legal-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 15px 0 15px 30px;
+            color: var(--gray);
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .notice-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .legal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tools"></i>
+                <span>TrendingTools</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="light-effect"></div>
+        <div class="light-effect light-effect-2"></div>
+        
+        <section class="legal-header">
+            <div class="container">
+                <h1>Acceptable Use Policy</h1>
+                <p>Last Updated: December 2023</p>
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </section>
+
+        <section class="legal-content container">
+            <div class="legal-section">
+                <h2>Introduction</h2>
+                <p>This Acceptable Use Policy ("Policy") outlines the acceptable use of the TrendingTools website and services ("Service"). This Policy is designed to protect the security, integrity, reliability, and privacy of our Service.</p>
+                
+                <p>By using TrendingTools, you agree to comply with this Policy. We may modify this Policy at any time by posting a revised version on our website. Your continued use of the Service constitutes acceptance of any changes.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Prohibited Activities</h2>
+                <p>You may not use, or encourage, promote, facilitate, or instruct others to use, the Service for any illegal, harmful, fraudulent, infringing, or offensive use, or to transmit, store, display, distribute, or otherwise make available content that is illegal, harmful, fraudulent, infringing, or offensive.</p>
+                
+                <div class="warning-box">
+                    <p><strong>Violation of this Policy may result in suspension or termination of your access to the Service, without notice.</strong></p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Specific Prohibited Uses</h2>
+                
+                <h3>No Illegal or Harmful Use</h3>
+                <p>You may not use the Service for any purpose that is unlawful or prohibited by this Policy. You may not use the Service in any manner that could damage, disable, overburden, or impair our servers or networks, or interfere with any other party's use and enjoyment of the Service.</p>
+                
+                <h3>No Security Violations</h3>
+                <p>You may not use the Service to violate the security or integrity of any network, computer, or communications system, software application, or network or computing device. Prohibited activities include:</p>
+                <ul>
+                    <li>Accessing or using any system without permission</li>
+                    <li>Attempting to probe, scan, or test the vulnerability of any system or network</li>
+                    <li>Breaching any security or authentication measures</li>
+                    <li>Interfering with any user, host, or network</li>
+                    <li>Distributing viruses, worms, Trojan horses, or other malicious code</li>
+                </ul>
+                
+                <h3>No Network Abuse</h3>
+                <p>You may not make network connections to any users, hosts, or networks unless you have permission to communicate with them. Prohibited activities include:</p>
+                <ul>
+                    <li>Monitoring or crawling of a system that impairs or disrupts the system being monitored or crawled</li>
+                    <li>Denial of Service (DoS) attacks</li>
+                    <li>Intentional interference with the proper functioning of any system</li>
+                    <li>Operating network services like open proxies, open mail relays, or open recursive domain name servers</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Content Restrictions</h2>
+                <p>You may not use the Service to generate, distribute, or facilitate the distribution of content that is:</p>
+                
+                <h3>Infringing</h3>
+                <ul>
+                    <li>Content that infringes or misappropriates the intellectual property or proprietary rights of others</li>
+                    <li>Content that violates copyright, trademark, patent, or other intellectual property laws</li>
+                </ul>
+                
+                <h3>Harmful or Fraudulent</h3>
+                <ul>
+                    <li>Content that is defamatory, obscene, abusive, invasive of privacy, or otherwise objectionable</li>
+                    <li>Content that is fraudulent, false, misleading, or deceptive</li>
+                    <li>Content that promotes illegal activities or provides instructional information about illegal activities</li>
+                </ul>
+                
+                <h3>Offensive</h3>
+                <ul>
+                    <li>Content that is hateful, discriminatory, or promotes violence against individuals or groups</li>
+                    <li>Content that harasses, abuses, stalks, threatens, or otherwise violates the legal rights of others</li>
+                    <li>Content that contains explicit or graphic descriptions or accounts of sexual acts</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Tool-Specific Restrictions</h2>
+                
+                <h3>Password Generator</h3>
+                <p>You may not use the password generator to:</p>
+                <ul>
+                    <li>Generate passwords for unauthorized access to systems or accounts</li>
+                    <li>Create passwords for illegal activities</li>
+                    <li>Bypass security measures or authentication systems</li>
+                </ul>
+                
+                <h3>QR Code Generator</h3>
+                <p>You may not use the QR code generator to:</p>
+                <ul>
+                    <li>Create QR codes that link to malicious websites</li>
+                    <li>Generate QR codes for phishing or scam operations</li>
+                    <li>Distribute QR codes containing illegal or harmful content</li>
+                </ul>
+                
+                <h3>Image Editor</h3>
+                <p>You may not use the image editor to:</p>
+                <ul>
+                    <li>Create or edit images for fraudulent purposes</li>
+                    <li>Produce counterfeit documents or identification</li>
+                    <li>Edit images to create misleading or deceptive content</li>
+                </ul>
+                
+                <div class="notice-box">
+                    <p><strong>Responsible Use:</strong> All tools should be used responsibly and ethically. If you're unsure whether a particular use is acceptable, please contact us before proceeding.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Compliance with Laws</h2>
+                <p>You are responsible for complying with all applicable laws, rules, and regulations in your use of the Service. This includes laws related to:</p>
+                <ul>
+                    <li>Data protection and privacy</li>
+                    <li>Intellectual property</li>
+                    <li>Export control</li>
+                    <li>Sanctions</li>
+                    <li>Consumer protection</li>
+                    <li>Unauthorized computer access</li>
+                    <li>Interception of communications</li>
+                </ul>
+                
+                <p>You are also responsible for ensuring that your use of the Service complies with the terms of this Policy and our Terms of Service.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Our Monitoring and Enforcement Rights</h2>
+                <p>We reserve the right, but do not assume the obligation, to investigate any violation of this Policy or misuse of the Service. We may:</p>
+                <ul>
+                    <li>Investigate violations of this Policy or misuse of the Service</li>
+                    <li>Remove, disable access to, or modify any content or resource that violates this Policy</li>
+                    <li>Report any activity that we suspect violates any law or regulation to appropriate law enforcement officials, regulators, or other third parties</li>
+                    <li>Cooperate with law enforcement agencies in the investigation of any suspected criminal activity</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Reporting Violations</h2>
+                <p>If you become aware of any violation of this Policy, you must immediately notify us by contacting us through our <a href="contact-us.html">Contact Us</a> page. Please provide a detailed description of the violation, including any relevant URLs or other information that will help us locate the material.</p>
+                
+                <p>We will investigate any reported violations and take appropriate action, which may include removing content, suspending or terminating access, or taking legal action.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Acceptable Use Policy from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.</p>
+                
+                <p>We encourage you to review this Acceptable Use Policy frequently to be informed of how we are protecting your information and ensuring responsible use of our Service.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Contact Information</h2>
+                <p>If you have any questions about this Acceptable Use Policy, please contact us through our <a href="contact-us.html">Contact Us</a> page.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TrendingTools</h3>
+                    <p>A collection of 10 essential free online tools that work directly in your browser. No accounts required, no data stored, completely private.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="acceptable-use-policy.html">Acceptable Use Policy</a></li>
+                        <li><a href="copyright-information.html">Copyright Information</a></li>
+                        <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>All Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#text-case">Text Case Converter</a></li>
+                        <li><a href="index.html#password-generator">Password Generator</a></li>
+                        <li><a href="index.html#unit-converter">Unit Converter</a></li>
+                        <li><a href="index.html#qr-generator">QR Code Generator</a></li>
+                        <li><a href="index.html#color-picker">Color Picker</a></li>
+                        <li><a href="index.html#calculator">Advanced Calculator</a></li>
+                        <li><a href="index.html#image-editor">Image Editor</a></li>
+                        <li><a href="index.html#word-counter">Word Counter</a></li>
+                        <li><a href="index.html#base64-converter">Base64 Converter</a></li>
+                        <li><a href="index.html#json-formatter">JSON Formatter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TrendingTools. All rights reserved. | This site is free to use and does not collect or store any user data.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.copyright p');
+            copyrightElements.forEach(el => {
+                el.innerHTML = el.innerHTML.replace('2023', year);
+            });
+        });
+    </script>
+</body>
+</html>
