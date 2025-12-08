@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://kingbothara4-tech.github.io/trendingtools/sitemap.xml
-Disallow: /admin/
-Disallow: /private/
-Crawl-delay: 2
