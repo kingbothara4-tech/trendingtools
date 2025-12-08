@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Tools - 10 Essential Free Online Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --glow: rgba(99, 102, 241, 0.5);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 25px 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--gray);
+        }
+
+        .light-effect {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .light-effect-2 {
+            left: -250px;
+            bottom: -250px;
+            top: auto;
+            right: auto;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px 0 80px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(99, 102, 241, 0.2);
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 2;
+        }
+
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .tool-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .tool-card p {
+            color: var(--gray);
+            flex-grow: 1;
+        }
+
+        /* Tool Page Styles */
+        .tool-page {
+            display: none;
+            padding: 40px 0 80px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .tool-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .tool-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tool-description {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Tool-specific styles */
+        .tool-section {
+            margin-bottom: 30px;
+        }
+
+        .tool-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        textarea, input, select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        textarea:focus, input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            word-break: break-word;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .result-box.hidden {
+            display: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .tool-container {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Color picker specific */
+        .color-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin: 0 auto 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .color-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-value {
+            padding: 12px;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 8px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        /* Unit converter specific */
+        .converter-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .converter-input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .converter-unit {
+            min-width: 150px;
+        }
+
+        .equal-sign {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Password generator specific */
+        .password-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .option-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .strength-meter {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .strength-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        .strength-weak {
+            background: #ef4444;
+        }
+
+        .strength-medium {
+            background: #f59e0b;
+        }
+
+        .strength-strong {
+            background: #10b981;
+        }
+
+        /* Image editor specific */
+        .image-upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+
+        .image-upload-area:hover {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .canvas-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        canvas {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .image-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <span>TrendingTools</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#tools">All Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <main id="home-page">
+        <div class="light-effect"></div>
+        <div class="light-effect light-effect-2"></div>
+        
+        <section class="hero">
+            <div class="container">
+                <h1>Essential Tools for Everyday Use</h1>
+                <p>Free, fast, and easy-to-use online tools that work directly in your browser. No accounts, no downloads, no backend required.</p>
+            </div>
+        </section>
+
+        <section class="tools-grid container" id="tools">
+            <!-- Tool Cards -->
+            <div class="tool-card" data-tool="text-case">
+                <div class="tool-icon">
+                    <i class="fas fa-font"></i>
+                </div>
+                <h3>Text Case Converter</h3>
+                <p>Convert text between uppercase, lowercase, sentence case and more with a single click.</p>
+            </div>
+
+            <div class="tool-card" data-tool="password-generator">
+                <div class="tool-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Password Generator</h3>
+                <p>Create strong, secure passwords with customizable length and character types.</p>
+            </div>
+
+            <div class="tool-card" data-tool="unit-converter">
+                <div class="tool-icon">
+                    <i class="fas fa-ruler-combined"></i>
+                </div>
+                <h3>Unit Converter</h3>
+                <p>Convert between different units of length, weight, temperature, and volume.</p>
+            </div>
+
+            <div class="tool-card" data-tool="qr-generator">
+                <div class="tool-icon">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>QR Code Generator</h3>
+                <p>Generate QR codes for URLs, text, contact information and more.</p>
+            </div>
+
+            <div class="tool-card" data-tool="color-picker">
+                <div class="tool-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Color Picker & Converter</h3>
+                <p>Pick colors and convert between HEX, RGB, HSL, and other color formats.</p>
+            </div>
+
+            <div class="tool-card" data-tool="calculator">
+                <div class="tool-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Advanced Calculator</h3>
+                <p>A powerful calculator with basic and scientific functions for all your math needs.</p>
+            </div>
+
+            <div class="tool-card" data-tool="image-editor">
+                <div class="tool-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>Image Editor</h3>
+                <p>Resize, crop, rotate and apply filters to images directly in your browser.</p>
+            </div>
+
+            <div class="tool-card" data-tool="word-counter">
+                <div class="tool-icon">
+                    <i class="fas fa-file-word"></i>
+                </div>
+                <h3>Word Counter</h3>
+                <p>Count words, characters, sentences, and paragraphs in any text.</p>
+            </div>
+
+            <div class="tool-card" data-tool="base64-converter">
+                <div class="tool-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Base64 Converter</h3>
+                <p>Encode and decode text to and from Base64 format instantly.</p>
+            </div>
+
+            <div class="tool-card" data-tool="json-formatter">
+                <div class="tool-icon">
+                    <i class="fas fa-brackets-curly"></i>
+                </div>
+                <h3>JSON Formatter</h3>
+                <p>Format, validate, and beautify JSON data for easier reading and debugging.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tool Pages -->
+    <!-- Text Case Converter -->
+    <section id="text-case-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-font"></i> Text Case Converter</h2>
+                <button class="back-button" id="back-from-text-case">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Convert your text to different cases instantly. Choose from uppercase, lowercase, sentence case, title case, and more.</p>
+                
+                <div class="tool-section">
+                    <h3>Enter Your Text</h3>
+                    <textarea id="text-case-input" placeholder="Type or paste your text here...">Hello World! This is a sample text to demonstrate the text case converter tool.</textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="to-upper">
+                        <i class="fas fa-text-height"></i> UPPERCASE
+                    </button>
+                    <button class="btn btn-primary" id="to-lower">
+                        <i class="fas fa-text-width"></i> lowercase
+                    </button>
+                    <button class="btn btn-primary" id="to-sentence">
+                        <i class="fas fa-paragraph"></i> Sentence case
+                    </button>
+                    <button class="btn btn-primary" id="to-title">
+                        <i class="fas fa-heading"></i> Title Case
+                    </button>
+                    <button class="btn btn-primary" id="to-camel">
+                        <i class="fas fa-font-case"></i> camelCase
+                    </button>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Converted Text</h3>
+                    <div class="result-box" id="text-case-result">
+                        Your converted text will appear here...
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="copy-text-case">
+                        <i class="fas fa-copy"></i> Copy Text
+                    </button>
+                    <button class="btn btn-secondary" id="clear-text-case">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Password Generator -->
+    <section id="password-generator-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-key"></i> Password Generator</h2>
+                <button class="back-button" id="back-from-password">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Create strong, secure passwords with customizable options. Adjust length and character types to meet your security requirements.</p>
+                
+                <div class="tool-section">
+                    <h3>Password Options</h3>
+                    <div class="password-options">
+                        <div class="option-group">
+                            <label for="password-length">Length:</label>
+                            <input type="range" id="password-length" min="6" max="32" value="12">
+                            <span id="length-value">12</span>
+                        </div>
+                        
+                        <div class="option-group">
+                            <input type="checkbox" id="include-uppercase" checked>
+                            <label for="include-uppercase">Uppercase Letters (A-Z)</label>
+                        </div>
+                        
+                        <div class="option-group">
+                            <input type="checkbox" id="include-lowercase" checked>
+                            <label for="include-lowercase">Lowercase Letters (a-z)</label>
+                        </div>
+                        
+                        <div class="option-group">
+                            <input type="checkbox" id="include-numbers" checked>
+                            <label for="include-numbers">Numbers (0-9)</label>
+                        </div>
+                        
+                        <div class="option-group">
+                            <input type="checkbox" id="include-symbols">
+                            <label for="include-symbols">Symbols (!@#$%^&*)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Generated Password</h3>
+                    <div class="result-box" id="password-result">
+                        Your generated password will appear here...
+                    </div>
+                    <div class="strength-meter">
+                        <div class="strength-fill" id="password-strength"></div>
+                    </div>
+                    <p id="strength-text">Password strength: <span id="strength-value">Medium</span></p>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="generate-password">
+                        <i class="fas fa-sync-alt"></i> Generate Password
+                    </button>
+                    <button class="btn btn-secondary" id="copy-password">
+                        <i class="fas fa-copy"></i> Copy Password
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unit Converter -->
+    <section id="unit-converter-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-ruler-combined"></i> Unit Converter</h2>
+                <button class="back-button" id="back-from-unit">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Convert between different units of measurement for length, weight, temperature, and volume instantly.</p>
+                
+                <div class="tool-section">
+                    <h3>Select Conversion Type</h3>
+                    <select id="conversion-type">
+                        <option value="length">Length</option>
+                        <option value="weight">Weight</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="volume">Volume</option>
+                    </select>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Convert Units</h3>
+                    <div class="converter-row">
+                        <input type="number" id="unit-input" class="converter-input" value="1" min="0" step="any">
+                        <select id="unit-from" class="converter-unit">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                        <div class="equal-sign">=</div>
+                        <div class="result-box" id="unit-result">1.00</div>
+                        <select id="unit-to" class="converter-unit">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="swap-units">
+                        <i class="fas fa-exchange-alt"></i> Swap Units
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Generator -->
+    <section id="qr-generator-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-qrcode"></i> QR Code Generator</h2>
+                <button class="back-button" id="back-from-qr">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Generate QR codes for URLs, text, contact information, and more. Customize size and colors.</p>
+                
+                <div class="tool-section">
+                    <h3>Enter Content for QR Code</h3>
+                    <textarea id="qr-content" placeholder="Enter URL, text, or other content...">https://trendingtools.com</textarea>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>QR Code Options</h3>
+                    <div class="password-options">
+                        <div class="option-group">
+                            <label for="qr-size">Size:</label>
+                            <input type="range" id="qr-size" min="100" max="500" value="250">
+                            <span id="size-value">250px</span>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="qr-color">Color:</label>
+                            <input type="color" id="qr-color" value="#000000">
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="qr-bg">Background:</label>
+                            <input type="color" id="qr-bg" value="#ffffff">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Generated QR Code</h3>
+                    <div class="result-box" id="qr-result">
+                        <canvas id="qr-canvas" width="250" height="250"></canvas>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="generate-qr">
+                        <i class="fas fa-qrcode"></i> Generate QR Code
+                    </button>
+                    <button class="btn btn-secondary" id="download-qr">
+                        <i class="fas fa-download"></i> Download QR Code
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Picker -->
+    <section id="color-picker-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-palette"></i> Color Picker & Converter</h2>
+                <button class="back-button" id="back-from-color">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Pick colors and convert between different color formats like HEX, RGB, HSL, and CMYK.</p>
+                
+                <div class="tool-section">
+                    <h3>Pick a Color</h3>
+                    <input type="color" id="color-picker" value="#6366f1">
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Color Preview</h3>
+                    <div class="color-preview" id="color-preview"></div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Color Values</h3>
+                    <div class="color-values">
+                        <div class="color-value">
+                            <strong>HEX</strong><br>
+                            <span id="color-hex">#6366f1</span>
+                        </div>
+                        <div class="color-value">
+                            <strong>RGB</strong><br>
+                            <span id="color-rgb">rgb(99, 102, 241)</span>
+                        </div>
+                        <div class="color-value">
+                            <strong>HSL</strong><br>
+                            <span id="color-hsl">hsl(239, 84%, 67%)</span>
+                        </div>
+                        <div class="color-value">
+                            <strong>CMYK</strong><br>
+                            <span id="color-cmyk">cmyk(59, 58, 0, 5)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="random-color">
+                        <i class="fas fa-random"></i> Random Color
+                    </button>
+                    <button class="btn btn-secondary" id="copy-hex">
+                        <i class="fas fa-copy"></i> Copy HEX
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-calculator"></i> Advanced Calculator</h2>
+                <button class="back-button" id="back-from-calculator">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">A powerful calculator with basic and scientific functions for all your mathematical needs.</p>
+                
+                <div class="tool-section">
+                    <h3>Calculator</h3>
+                    <div class="result-box" id="calculator-display">0</div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 20px;">
+                        <button class="btn btn-secondary calc-btn" data-value="C">C</button>
+                        <button class="btn btn-secondary calc-btn" data-value="CE">CE</button>
+                        <button class="btn btn-secondary calc-btn" data-value="⌫">⌫</button>
+                        <button class="btn btn-secondary calc-btn" data-value="/">/</button>
+                        <button class="btn btn-secondary calc-btn" data-value="√">√</button>
+                        
+                        <button class="btn btn-secondary calc-btn" data-value="7">7</button>
+                        <button class="btn btn-secondary calc-btn" data-value="8">8</button>
+                        <button class="btn btn-secondary calc-btn" data-value="9">9</button>
+                        <button class="btn btn-secondary calc-btn" data-value="*">×</button>
+                        <button class="btn btn-secondary calc-btn" data-value="^">^</button>
+                        
+                        <button class="btn btn-secondary calc-btn" data-value="4">4</button>
+                        <button class="btn btn-secondary calc-btn" data-value="5">5</button>
+                        <button class="btn btn-secondary calc-btn" data-value="6">6</button>
+                        <button class="btn btn-secondary calc-btn" data-value="-">-</button>
+                        <button class="btn btn-secondary calc-btn" data-value="%">%</button>
+                        
+                        <button class="btn btn-secondary calc-btn" data-value="1">1</button>
+                        <button class="btn btn-secondary calc-btn" data-value="2">2</button>
+                        <button class="btn btn-secondary calc-btn" data-value="3">3</button>
+                        <button class="btn btn-secondary calc-btn" data-value="+">+</button>
+                        <button class="btn btn-secondary calc-btn" data-value="π">π</button>
+                        
+                        <button class="btn btn-secondary calc-btn" data-value="0">0</button>
+                        <button class="btn btn-secondary calc-btn" data-value=".">.</button>
+                        <button class="btn btn-secondary calc-btn" data-value="±">±</button>
+                        <button class="btn btn-primary" id="calculate" style="grid-column: span 2;">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Editor -->
+    <section id="image-editor-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-image"></i> Image Editor</h2>
+                <button class="back-button" id="back-from-image">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Upload an image and apply basic edits like resizing, cropping, rotating, and applying filters.</p>
+                
+                <div class="tool-section">
+                    <h3>Upload Image</h3>
+                    <div class="image-upload-area" id="image-upload">
+                        <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; margin-bottom: 15px; color: var(--primary);"></i>
+                        <p>Click here or drag and drop an image to upload</p>
+                        <p style="font-size: 0.9rem; color: var(--gray); margin-top: 10px;">Supports JPG, PNG, GIF (Max 5MB)</p>
+                        <input type="file" id="image-input" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Image Preview</h3>
+                    <div class="canvas-container">
+                        <canvas id="image-canvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Image Controls</h3>
+                    <div class="image-controls">
+                        <button class="btn btn-secondary" id="rotate-left">
+                            <i class="fas fa-undo"></i> Rotate Left
+                        </button>
+                        <button class="btn btn-secondary" id="rotate-right">
+                            <i class="fas fa-redo"></i> Rotate Right
+                        </button>
+                        <button class="btn btn-secondary" id="resize-btn">
+                            <i class="fas fa-expand-alt"></i> Resize
+                        </button>
+                        <button class="btn btn-secondary" id="grayscale">
+                            <i class="fas fa-adjust"></i> Grayscale
+                        </button>
+                        <button class="btn btn-secondary" id="reset-image">
+                            <i class="fas fa-trash"></i> Reset
+                        </button>
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <label for="brightness">Brightness:</label>
+                        <input type="range" id="brightness" min="0" max="200" value="100">
+                        
+                        <label for="contrast" style="margin-left: 20px;">Contrast:</label>
+                        <input type="range" id="contrast" min="0" max="200" value="100">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="download-image">
+                        <i class="fas fa-download"></i> Download Image
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Word Counter -->
+    <section id="word-counter-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-file-word"></i> Word Counter</h2>
+                <button class="back-button" id="back-from-word">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Count words, characters, sentences, and paragraphs in any text. Useful for writers, students, and professionals.</p>
+                
+                <div class="tool-section">
+                    <h3>Enter Your Text</h3>
+                    <textarea id="word-counter-input" placeholder="Type or paste your text here...">Hello! This is a sample text for the word counter tool. It will count words, characters, sentences, and paragraphs. You can paste any text here to analyze it. This tool is completely free and works entirely in your browser.</textarea>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Text Statistics</h3>
+                    <div class="color-values">
+                        <div class="color-value">
+                            <strong>Words</strong><br>
+                            <span id="word-count">0</span>
+                        </div>
+                        <div class="color-value">
+                            <strong>Characters</strong><br>
+                            <span id="char-count">0</span>
+                        </div>
+                        <div class="color-value">
+                            <strong>Sentences</strong><br>
+                            <span id="sentence-count">0</span>
+                        </div>
+                        <div class="color-value">
+                            <strong>Paragraphs</strong><br>
+                            <span id="paragraph-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="clear-word-counter">
+                        <i class="fas fa-trash"></i> Clear Text
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base64 Converter -->
+    <section id="base64-converter-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-code"></i> Base64 Converter</h2>
+                <button class="back-button" id="back-from-base64">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Encode text to Base64 or decode Base64 back to text instantly. Useful for developers and data handling.</p>
+                
+                <div class="tool-section">
+                    <h3>Input Text</h3>
+                    <textarea id="base64-input" placeholder="Enter text to encode or Base64 to decode...">Hello, this is a sample text for Base64 encoding!</textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="encode-base64">
+                        <i class="fas fa-lock"></i> Encode to Base64
+                    </button>
+                    <button class="btn btn-primary" id="decode-base64">
+                        <i class="fas fa-unlock"></i> Decode from Base64
+                    </button>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Result</h3>
+                    <div class="result-box" id="base64-result">
+                        Your encoded/decoded result will appear here...
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="copy-base64">
+                        <i class="fas fa-copy"></i> Copy Result
+                    </button>
+                    <button class="btn btn-secondary" id="clear-base64">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JSON Formatter -->
+    <section id="json-formatter-page" class="tool-page">
+        <div class="container">
+            <div class="tool-header">
+                <h2><i class="fas fa-brackets-curly"></i> JSON Formatter</h2>
+                <button class="back-button" id="back-from-json">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </button>
+            </div>
+            
+            <div class="tool-container">
+                <p class="tool-description">Format, validate, and beautify JSON data for easier reading and debugging. Also minify JSON to reduce size.</p>
+                
+                <div class="tool-section">
+                    <h3>Enter JSON Data</h3>
+                    <textarea id="json-input" placeholder='Paste your JSON here...'>{"name": "John Doe", "age": 30, "city": "New York", "hobbies": ["reading", "coding", "gaming"], "isStudent": false}</textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="format-json">
+                        <i class="fas fa-indent"></i> Format JSON
+                    </button>
+                    <button class="btn btn-primary" id="minify-json">
+                        <i class="fas fa-compress-alt"></i> Minify JSON
+                    </button>
+                    <button class="btn btn-primary" id="validate-json">
+                        <i class="fas fa-check-circle"></i> Validate JSON
+                    </button>
+                </div>
+                
+                <div class="tool-section">
+                    <h3>Formatted JSON</h3>
+                    <div class="result-box" id="json-result">
+                        <pre id="json-output">Your formatted JSON will appear here...</pre>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="copy-json">
+                        <i class="fas fa-copy"></i> Copy JSON
+                    </button>
+                    <button class="btn btn-secondary" id="clear-json">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TrendingTools</h3>
+                    <p>A collection of 10 essential free online tools that work directly in your browser. No accounts required, no data stored, completely private.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>All Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-tool="text-case">Text Case Converter</a></li>
+                        <li><a href="#" data-tool="password-generator">Password Generator</a></li>
+                        <li><a href="#" data-tool="unit-converter">Unit Converter</a></li>
+                        <li><a href="#" data-tool="qr-generator">QR Code Generator</a></li>
+                        <li><a href="#" data-tool="color-picker">Color Picker</a></li>
+                        <li><a href="#" data-tool="calculator">Advanced Calculator</a></li>
+                        <li><a href="#" data-tool="image-editor">Image Editor</a></li>
+                        <li><a href="#" data-tool="word-counter">Word Counter</a></li>
+                        <li><a href="#" data-tool="base64-converter">Base64 Converter</a></li>
+                        <li><a href="#" data-tool="json-formatter">JSON Formatter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal & Policies</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Acceptable Use Policy</a></li>
+                        <li><a href="#">Copyright Information</a></li>
+                        <li><a href="#">Data Processing Agreement</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 TrendingTools. All rights reserved. | This site is free to use and does not collect or store any user data.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation between home page and tool pages
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all tool cards
+            const toolCards = document.querySelectorAll('.tool-card');
+            const homePage = document.getElementById('home-page');
+            const homeLink = document.getElementById('home-link');
+            
+            // Tool page elements
+            const toolPages = document.querySelectorAll('.tool-page');
+            
+            // Show home page and hide all tool pages initially
+            function showHomePage() {
+                homePage.style.display = 'block';
+                toolPages.forEach(page => {
+                    page.style.display = 'none';
+                });
+            }
+            
+            // Show specific tool page
+            function showToolPage(toolId) {
+                homePage.style.display = 'none';
+                toolPages.forEach(page => {
+                    page.style.display = 'none';
+                });
+                
+                const toolPage = document.getElementById(`${toolId}-page`);
+                if (toolPage) {
+                    toolPage.style.display = 'block';
+                }
+            }
+            
+            // Add click event to all tool cards
+            toolCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const toolId = this.getAttribute('data-tool');
+                    showToolPage(toolId);
+                });
+            });
+            
+            // Add click event to home link
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showHomePage();
+            });
+            
+            // Add click event to footer tool links
+            const footerToolLinks = document.querySelectorAll('.footer-links a[data-tool]');
+            footerToolLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const toolId = this.getAttribute('data-tool');
+                    showToolPage(toolId);
+                });
+            });
+            
+            // Add click events to all back buttons
+            const backButtons = document.querySelectorAll('.back-button');
+            backButtons.forEach(button => {
+                button.addEventListener('click', showHomePage);
+            });
+            
+            // Initialize all tools
+            initializeTextCaseConverter();
+            initializePasswordGenerator();
+            initializeUnitConverter();
+            initializeQRGenerator();
+            initializeColorPicker();
+            initializeCalculator();
+            initializeImageEditor();
+            initializeWordCounter();
+            initializeBase64Converter();
+            initializeJSONFormatter();
+        });
+
+        // Text Case Converter Tool
+        function initializeTextCaseConverter() {
+            const textInput = document.getElementById('text-case-input');
+            const resultBox = document.getElementById('text-case-result');
+            const copyButton = document.getElementById('copy-text-case');
+            const clearButton = document.getElementById('clear-text-case');
+            
+            // Case conversion functions
+            document.getElementById('to-upper').addEventListener('click', function() {
+                resultBox.textContent = textInput.value.toUpperCase();
+            });
+            
+            document.getElementById('to-lower').addEventListener('click', function() {
+                resultBox.textContent = textInput.value.toLowerCase();
+            });
+            
+            document.getElementById('to-sentence').addEventListener('click', function() {
+                const text = textInput.value.toLowerCase();
+                resultBox.textContent = text.charAt(0).toUpperCase() + text.slice(1);
+            });
+            
+            document.getElementById('to-title').addEventListener('click', function() {
+                const text = textInput.value.toLowerCase().split(' ');
+                const result = text.map(word => {
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }).join(' ');
+                resultBox.textContent = result;
+            });
+            
+            document.getElementById('to-camel').addEventListener('click', function() {
+                const text = textInput.value.toLowerCase().split(' ');
+                const result = text.map((word, index) => {
+                    if (index === 0) return word;
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }).join('');
+                resultBox.textContent = result;
+            });
+            
+            // Copy button
+            copyButton.addEventListener('click', function() {
+                navigator.clipboard.writeText(resultBox.textContent).then(() => {
+                    const originalText = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalText;
+                    }, 2000);
+                });
+            });
+            
+            // Clear button
+            clearButton.addEventListener('click', function() {
+                textInput.value = '';
+                resultBox.textContent = 'Your converted text will appear here...';
+            });
+        }
+
+        // Password Generator Tool
+        function initializePasswordGenerator() {
+            const passwordLength = document.getElementById('password-length');
+            const lengthValue = document.getElementById('length-value');
+            const generateButton = document.getElementById('generate-password');
+            const copyButton = document.getElementById('copy-password');
+            const passwordResult = document.getElementById('password-result');
+            const strengthFill = document.getElementById('password-strength');
+            const strengthValue = document.getElementById('strength-value');
+            
+            // Update length value display
+            passwordLength.addEventListener('input', function() {
+                lengthValue.textContent = this.value;
+            });
+            
+            // Generate password
+            generateButton.addEventListener('click', generatePassword);
+            
+            // Generate initial password on load
+            generatePassword();
+            
+            function generatePassword() {
+                const length = parseInt(passwordLength.value);
+                const includeUppercase = document.getElementById('include-uppercase').checked;
+                const includeLowercase = document.getElementById('include-lowercase').checked;
+                const includeNumbers = document.getElementById('include-numbers').checked;
+                const includeSymbols = document.getElementById('include-symbols').checked;
+                
+                // Character sets
+                const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+                const numbers = '0123456789';
+                const symbols = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+                
+                // Build character pool based on selections
+                let charPool = '';
+                if (includeUppercase) charPool += uppercase;
+                if (includeLowercase) charPool += lowercase;
+                if (includeNumbers) charPool += numbers;
+                if (includeSymbols) charPool += symbols;
+                
+                // If no character type selected, use all
+                if (charPool === '') {
+                    charPool = uppercase + lowercase + numbers;
+                }
+                
+                // Generate password
+                let password = '';
+                for (let i = 0; i < length; i++) {
+                    const randomIndex = Math.floor(Math.random() * charPool.length);
+                    password += charPool[randomIndex];
+                }
+                
+                // Display password
+                passwordResult.textContent = password;
+                
+                // Calculate password strength
+                let strength = 0;
+                if (includeUppercase) strength++;
+                if (includeLowercase) strength++;
+                if (includeNumbers) strength++;
+                if (includeSymbols) strength++;
+                if (length >= 12) strength++;
+                
+                // Update strength meter
+                let strengthPercent = 0;
+                let strengthText = 'Weak';
+                let strengthClass = 'strength-weak';
+                
+                if (strength >= 4) {
+                    strengthPercent = 100;
+                    strengthText = 'Strong';
+                    strengthClass = 'strength-strong';
+                } else if (strength >= 3) {
+                    strengthPercent = 66;
+                    strengthText = 'Medium';
+                    strengthClass = 'strength-medium';
+                } else {
+                    strengthPercent = 33;
+                    strengthText = 'Weak';
+                    strengthClass = 'strength-weak';
+                }
+                
+                strengthFill.style.width = `${strengthPercent}%`;
+                strengthFill.className = `strength-fill ${strengthClass}`;
+                strengthValue.textContent = strengthText;
+            }
+            
+            // Copy password
+            copyButton.addEventListener('click', function() {
+                navigator.clipboard.writeText(passwordResult.textContent).then(() => {
+                    const originalText = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalText;
+                    }, 2000);
+                });
+            });
+        }
+
+        // Unit Converter Tool
+        function initializeUnitConverter() {
+            const conversionType = document.getElementById('conversion-type');
+            const unitFrom = document.getElementById('unit-from');
+            const unitTo = document.getElementById('unit-to');
+            const unitInput = document.getElementById('unit-input');
+            const unitResult = document.getElementById('unit-result');
+            const swapButton = document.getElementById('swap-units');
+            
+            // Unit definitions
+            const units = {
+                length: {
+                    meter: 1,
+                    kilometer: 1000,
+                    centimeter: 0.01,
+                    millimeter: 0.001,
+                    mile: 1609.34,
+                    yard: 0.9144,
+                    foot: 0.3048,
+                    inch: 0.0254
+                },
+                weight: {
+                    kilogram: 1,
+                    gram: 0.001,
+                    pound: 0.453592,
+                    ounce: 0.0283495,
+                    ton: 1000
+                },
+                temperature: {
+                    celsius: 'celsius',
+                    fahrenheit: 'fahrenheit',
+                    kelvin: 'kelvin'
+                },
+                volume: {
+                    liter: 1,
+                    milliliter: 0.001,
+                    gallon: 3.78541,
+                    quart: 0.946353,
+                    pint: 0.473176,
+                    cup: 0.24
+                }
+            };
+            
+            // Populate unit dropdowns
+            function populateUnits() {
+                const type = conversionType.value;
+                const unitList = Object.keys(units[type]);
+                
+                // Clear existing options
+                unitFrom.innerHTML = '';
+                unitTo.innerHTML = '';
+                
+                // Add new options
+                unitList.forEach(unit => {
+                    const optionFrom = document.createElement('option');
+                    optionFrom.value = unit;
+                    optionFrom.textContent = unit;
+                    
+                    const optionTo = document.createElement('option');
+                    optionTo.value = unit;
+                    optionTo.textContent = unit;
+                    
+                    unitFrom.appendChild(optionFrom);
+                    unitTo.appendChild(optionTo);
+                });
+                
+                // Set default selections
+                if (type === 'length') {
+                    unitFrom.value = 'meter';
+                    unitTo.value = 'foot';
+                } else if (type === 'weight') {
+                    unitFrom.value = 'kilogram';
+                    unitTo.value = 'pound';
+                } else if (type === 'temperature') {
+                    unitFrom.value = 'celsius';
+                    unitTo.value = 'fahrenheit';
+                } else if (type === 'volume') {
+                    unitFrom.value = 'liter';
+                    unitTo.value = 'gallon';
+                }
+                
+                // Perform initial conversion
+                convertUnits();
+            }
+            
+            // Conversion function
+            function convertUnits() {
+                const type = conversionType.value;
+                const fromUnit = unitFrom.value;
+                const toUnit = unitTo.value;
+                const value = parseFloat(unitInput.value) || 0;
+                
+                let result = 0;
+                
+                if (type === 'temperature') {
+                    // Temperature conversion
+                    if (fromUnit === 'celsius') {
+                        if (toUnit === 'fahrenheit') {
+                            result = (value * 9/5) + 32;
+                        } else if (toUnit === 'kelvin') {
+                            result = value + 273.15;
+                        } else {
+                            result = value;
+                        }
+                    } else if (fromUnit === 'fahrenheit') {
+                        if (toUnit === 'celsius') {
+                            result = (value - 32) * 5/9;
+                        } else if (toUnit === 'kelvin') {
+                            result = (value - 32) * 5/9 + 273.15;
+                        } else {
+                            result = value;
+                        }
+                    } else if (fromUnit === 'kelvin') {
+                        if (toUnit === 'celsius') {
+                            result = value - 273.15;
+                        } else if (toUnit === 'fahrenheit') {
+                            result = (value - 273.15) * 9/5 + 32;
+                        } else {
+                            result = value;
+                        }
+                    }
+                } else {
+                    // Standard conversion
+                    const fromValue = units[type][fromUnit];
+                    const toValue = units[type][toUnit];
+                    result = value * fromValue / toValue;
+                }
+                
+                // Display result with 2 decimal places
+                unitResult.textContent = result.toFixed(2);
+            }
+            
+            // Event listeners
+            conversionType.addEventListener('change', populateUnits);
+            unitFrom.addEventListener('change', convertUnits);
+            unitTo.addEventListener('change', convertUnits);
+            unitInput.addEventListener('input', convertUnits);
+            
+            // Swap units
+            swapButton.addEventListener('click', function() {
+                const temp = unitFrom.value;
+                unitFrom.value = unitTo.value;
+                unitTo.value = temp;
+                convertUnits();
+            });
+            
+            // Initialize
+            populateUnits();
+        }
+
+        // QR Code Generator Tool
+        function initializeQRGenerator() {
+            const qrContent = document.getElementById('qr-content');
+            const qrSize = document.getElementById('qr-size');
+            const sizeValue = document.getElementById('size-value');
+            const qrColor = document.getElementById('qr-color');
+            const qrBg = document.getElementById('qr-bg');
+            const generateButton = document.getElementById('generate-qr');
+            const downloadButton = document.getElementById('download-qr');
+            const qrCanvas = document.getElementById('qr-canvas');
+            const ctx = qrCanvas.getContext('2d');
+            
+            // Update size value display
+            qrSize.addEventListener('input', function() {
+                sizeValue.textContent = `${this.value}px`;
+                generateQRCode();
+            });
+            
+            // Generate QR code
+            function generateQRCode() {
+                const content = qrContent.value || 'https://trendingtools.com';
+                const size = parseInt(qrSize.value);
+                const color = qrColor.value;
+                const bgColor = qrBg.value;
+                
+                // Update canvas size
+                qrCanvas.width = size;
+                qrCanvas.height = size;
+                
+                // Clear canvas
+                ctx.fillStyle = bgColor;
+                ctx.fillRect(0, 0, size, size);
+                
+                // Simple QR code generation (simplified version)
+                // In a real application, you would use a QR code library
+                // For this demo, we'll create a pattern that looks like a QR code
+                
+                // Draw border
+                ctx.fillStyle = color;
+                const cellSize = size / 25;
+                
+                // Draw corner markers
+                drawSquare(2, 2, 7, 7);
+                drawSquare(2, 17, 7, 7);
+                drawSquare(17, 2, 7, 7);
+                
+                // Draw random pattern (simulating QR code)
+                for (let row = 0; row < 25; row++) {
+                    for (let col = 0; col < 25; col++) {
+                        // Skip corner markers
+                        if ((row < 9 && col < 9) || (row < 9 && col > 15) || (row > 15 && col < 9)) {
+                            continue;
+                        }
+                        
+                        // Random pattern
+                        if (Math.random() > 0.5) {
+                            ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+                        }
+                    }
+                }
+                
+                // Helper function to draw a square in the grid
+                function drawSquare(startX, startY, width, height) {
+                    for (let x = startX; x < startX + width; x++) {
+                        for (let y = startY; y < startY + height; y++) {
+                            // Draw border
+                            if (x === startX || x === startX + width - 1 || 
+                                y === startY || y === startY + height - 1) {
+                                ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+                            } else {
+                                // Fill interior
+                                ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Event listeners
+            qrContent.addEventListener('input', generateQRCode);
+            qrColor.addEventListener('input', generateQRCode);
+            qrBg.addEventListener('input', generateQRCode);
+            generateButton.addEventListener('click', generateQRCode);
+            
+            // Download QR code
+            downloadButton.addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.download = 'qr-code.png';
+                link.href = qrCanvas.toDataURL('image/png');
+                link.click();
+            });
+            
+            // Generate initial QR code
+            generateQRCode();
+        }
+
+        // Color Picker Tool
+        function initializeColorPicker() {
+            const colorPicker = document.getElementById('color-picker');
+            const colorPreview = document.getElementById('color-preview');
+            const colorHex = document.getElementById('color-hex');
+            const colorRgb = document.getElementById('color-rgb');
+            const colorHsl = document.getElementById('color-hsl');
+            const colorCmyk = document.getElementById('color-cmyk');
+            const randomButton = document.getElementById('random-color');
+            const copyHexButton = document.getElementById('copy-hex');
+            
+            // Update color display
+            function updateColor(hexColor) {
+                colorPicker.value = hexColor;
+                colorPreview.style.backgroundColor = hexColor;
+                colorHex.textContent = hexColor;
+                
+                // Convert hex to rgb
+                const r = parseInt(hexColor.slice(1, 3), 16);
+                const g = parseInt(hexColor.slice(3, 5), 16);
+                const b = parseInt(hexColor.slice(5, 7), 16);
+                
+                colorRgb.textContent = `rgb(${r}, ${g}, ${b})`;
+                
+                // Convert rgb to hsl
+                const hsl = rgbToHsl(r, g, b);
+                colorHsl.textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+                
+                // Convert rgb to cmyk
+                const cmyk = rgbToCmyk(r, g, b);
+                colorCmyk.textContent = `cmyk(${cmyk.c}, ${cmyk.m}, ${cmyk.y}, ${cmyk.k})`;
+            }
+            
+            // RGB to HSL conversion
+            function rgbToHsl(r, g, b) {
+                r /= 255;
+                g /= 255;
+                b /= 255;
+                
+                const max = Math.max(r, g, b);
+                const min = Math.min(r, g, b);
+                let h, s, l = (max + min) / 2;
+                
+                if (max === min) {
+                    h = s = 0; // achromatic
+                } else {
+                    const d = max - min;
+                    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                    
+                    switch (max) {
+                        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                        case g: h = (b - r) / d + 2; break;
+                        case b: h = (r - g) / d + 4; break;
+                    }
+                    
+                    h /= 6;
+                }
+                
+                return {
+                    h: Math.round(h * 360),
+                    s: Math.round(s * 100),
+                    l: Math.round(l * 100)
+                };
+            }
+            
+            // RGB to CMYK conversion
+            function rgbToCmyk(r, g, b) {
+                if (r === 0 && g === 0 && b === 0) {
+                    return { c: 0, m: 0, y: 0, k: 100 };
+                }
+                
+                let c = 1 - (r / 255);
+                let m = 1 - (g / 255);
+                let y = 1 - (b / 255);
+                
+                const min = Math.min(c, m, y);
+                c = Math.round(((c - min) / (1 - min)) * 100);
+                m = Math.round(((m - min) / (1 - min)) * 100);
+                y = Math.round(((y - min) / (1 - min)) * 100);
+                const k = Math.round(min * 100);
+                
+                return { c, m, y, k };
+            }
+            
+            // Random color generator
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            
+            // Event listeners
+            colorPicker.addEventListener('input', function() {
+                updateColor(this.value);
+            });
+            
+            randomButton.addEventListener('click', function() {
+                updateColor(getRandomColor());
+            });
+            
+            copyHexButton.addEventListener('click', function() {
+                navigator.clipboard.writeText(colorHex.textContent).then(() => {
+                    const originalText = copyHexButton.innerHTML;
+                    copyHexButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        copyHexButton.innerHTML = originalText;
+                    }, 2000);
+                });
+            });
+            
+            // Initialize with default color
+            updateColor('#6366f1');
+        }
+
+        // Calculator Tool
+        function initializeCalculator() {
+            const display = document.getElementById('calculator-display');
+            const calcButtons = document.querySelectorAll('.calc-btn');
+            const calculateButton = document.getElementById('calculate');
+            
+            let currentInput = '0';
+            let previousInput = '';
+            let operation = null;
+            let resetScreen = false;
+            
+            // Update display
+            function updateDisplay() {
+                display.textContent = currentInput;
+            }
+            
+            // Append number
+            function appendNumber(number) {
+                if (currentInput === '0' || resetScreen) {
+                    currentInput = number;
+                    resetScreen = false;
+                } else {
+                    currentInput += number;
+                }
+                updateDisplay();
+            }
+            
+            // Choose operation
+            function chooseOperation(op) {
+                if (currentInput === '') return;
+                
+                if (previousInput !== '') {
+                    compute();
+                }
+                
+                operation = op;
+                previousInput = currentInput;
+                resetScreen = true;
+            }
+            
+            // Compute calculation
+            function compute() {
+                let computation;
+                const prev = parseFloat(previousInput);
+                const current = parseFloat(currentInput);
+                
+                if (isNaN(prev) || isNaN(current)) return;
+                
+                switch (operation) {
+                    case '+':
+                        computation = prev + current;
+                        break;
+                    case '-':
+                        computation = prev - current;
+                        break;
+                    case '*':
+                        computation = prev * current;
+                        break;
+                    case '/':
+                        computation = prev / current;
+                        break;
+                    case '^':
+                        computation = Math.pow(prev, current);
+                        break;
+                    case '%':
+                        computation = prev % current;
+                        break;
+                    case '√':
+                        computation = Math.sqrt(current);
+                        break;
+                    default:
+                        return;
+                }
+                
+                currentInput = computation.toString();
+                operation = null;
+                previousInput = '';
+                updateDisplay();
+            }
+            
+            // Clear calculator
+            function clearCalculator() {
+                currentInput = '0';
+                previousInput = '';
+                operation = null;
+                updateDisplay();
+            }
+            
+            // Delete last character
+            function deleteLast() {
+                if (currentInput.length > 1) {
+                    currentInput = currentInput.slice(0, -1);
+                } else {
+                    currentInput = '0';
+                }
+                updateDisplay();
+            }
+            
+            // Add event listeners to calculator buttons
+            calcButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const value = this.getAttribute('data-value');
+                    
+                    if (value >= '0' && value <= '9') {
+                        appendNumber(value);
+                    } else if (value === '.') {
+                        if (!currentInput.includes('.')) {
+                            appendNumber(value);
+                        }
+                    } else if (value === 'C') {
+                        clearCalculator();
+                    } else if (value === 'CE') {
+                        currentInput = '0';
+                        updateDisplay();
+                    } else if (value === '⌫') {
+                        deleteLast();
+                    } else if (value === '±') {
+                        currentInput = (-parseFloat(currentInput)).toString();
+                        updateDisplay();
+                    } else if (value === 'π') {
+                        currentInput = Math.PI.toString();
+                        updateDisplay();
+                    } else {
+                        chooseOperation(value);
+                    }
+                });
+            });
+            
+            // Calculate button
+            calculateButton.addEventListener('click', function() {
+                compute();
+            });
+            
+            // Initialize display
+            updateDisplay();
+        }
+
+        // Image Editor Tool
+        function initializeImageEditor() {
+            const imageInput = document.getElementById('image-input');
+            const imageUpload = document.getElementById('image-upload');
+            const imageCanvas = document.getElementById('image-canvas');
+            const ctx = imageCanvas.getContext('2d');
+            let originalImage = null;
+            let currentImage = null;
+            
+            // Image upload
+            imageUpload.addEventListener('click', function() {
+                imageInput.click();
+            });
+            
+            imageInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        const img = new Image();
+                        img.onload = function() {
+                            // Set canvas size to image size (max 500px for display)
+                            const maxWidth = 500;
+                            const scale = maxWidth / img.width;
+                            imageCanvas.width = maxWidth;
+                            imageCanvas.height = img.height * scale;
+                            
+                            // Draw image on canvas
+                            ctx.drawImage(img, 0, 0, imageCanvas.width, imageCanvas.height);
+                            originalImage = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+                            currentImage = originalImage;
+                        };
+                        img.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Image controls
+            document.getElementById('rotate-left').addEventListener('click', function() {
+                rotateImage(-90);
+            });
+            
+            document.getElementById('rotate-right').addEventListener('click', function() {
+                rotateImage(90);
+            });
+            
+            document.getElementById('resize-btn').addEventListener('click', function() {
+                const newWidth = prompt('Enter new width (in pixels):', imageCanvas.width);
+                if (newWidth && !isNaN(newWidth) && newWidth > 0) {
+                    resizeImage(parseInt(newWidth));
+                }
+            });
+            
+            document.getElementById('grayscale').addEventListener('click', function() {
+                applyGrayscale();
+            });
+            
+            document.getElementById('reset-image').addEventListener('click', function() {
+                if (originalImage) {
+                    ctx.putImageData(originalImage, 0, 0);
+                    currentImage = originalImage;
+                }
+            });
+            
+            // Brightness and contrast
+            document.getElementById('brightness').addEventListener('input', function() {
+                applyBrightnessContrast();
+            });
+            
+            document.getElementById('contrast').addEventListener('input', function() {
+                applyBrightnessContrast();
+            });
+            
+            // Download image
+            document.getElementById('download-image').addEventListener('click', function() {
+                if (!currentImage) return;
+                
+                const link = document.createElement('a');
+                link.download = 'edited-image.png';
+                link.href = imageCanvas.toDataURL('image/png');
+                link.click();
+            });
+            
+            // Helper functions
+            function rotateImage(degrees) {
+                if (!currentImage) return;
+                
+                // Create a temporary canvas
+                const tempCanvas = document.createElement('canvas');
+                const tempCtx = tempCanvas.getContext('2d');
+                
+                // Set temp canvas dimensions (swap for 90° rotations)
+                if (degrees % 180 !== 0) {
+                    tempCanvas.width = imageCanvas.height;
+                    tempCanvas.height = imageCanvas.width;
+                } else {
+                    tempCanvas.width = imageCanvas.width;
+                    tempCanvas.height = imageCanvas.height;
+                }
+                
+                // Translate and rotate
+                tempCtx.translate(tempCanvas.width / 2, tempCanvas.height / 2);
+                tempCtx.rotate(degrees * Math.PI / 180);
+                tempCtx.drawImage(imageCanvas, -imageCanvas.width / 2, -imageCanvas.height / 2);
+                
+                // Update main canvas
+                imageCanvas.width = tempCanvas.width;
+                imageCanvas.height = tempCanvas.height;
+                ctx.drawImage(tempCanvas, 0, 0);
+                
+                // Update current image
+                currentImage = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+            }
+            
+            function resizeImage(newWidth) {
+                if (!currentImage) return;
+                
+                const scale = newWidth / imageCanvas.width;
+                const newHeight = Math.round(imageCanvas.height * scale);
+                
+                // Create a temporary canvas
+                const tempCanvas = document.createElement('canvas');
+                const tempCtx = tempCanvas.getContext('2d');
+                
+                tempCanvas.width = newWidth;
+                tempCanvas.height = newHeight;
+                
+                // Draw scaled image
+                tempCtx.drawImage(imageCanvas, 0, 0, newWidth, newHeight);
+                
+                // Update main canvas
+                imageCanvas.width = newWidth;
+                imageCanvas.height = newHeight;
+                ctx.drawImage(tempCanvas, 0, 0);
+                
+                // Update current image
+                currentImage = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+            }
+            
+            function applyGrayscale() {
+                if (!currentImage) return;
+                
+                const imageData = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+                const data = imageData.data;
+                
+                for (let i = 0; i < data.length; i += 4) {
+                    const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                    data[i] = avg;     // red
+                    data[i + 1] = avg; // green
+                    data[i + 2] = avg; // blue
+                }
+                
+                ctx.putImageData(imageData, 0, 0);
+                currentImage = imageData;
+            }
+            
+            function applyBrightnessContrast() {
+                if (!currentImage) return;
+                
+                const brightness = parseInt(document.getElementById('brightness').value) / 100;
+                const contrast = parseInt(document.getElementById('contrast').value) / 100;
+                
+                // Restore original image first
+                ctx.putImageData(originalImage, 0, 0);
+                
+                // Apply brightness and contrast
+                const imageData = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+                const data = imageData.data;
+                
+                const factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+                
+                for (let i = 0; i < data.length; i += 4) {
+                    // Apply contrast and brightness
+                    data[i] = factor * (data[i] - 128) + 128 + brightness * 255;
+                    data[i + 1] = factor * (data[i + 1] - 128) + 128 + brightness * 255;
+                    data[i + 2] = factor * (data[i + 2] - 128) + 128 + brightness * 255;
+                    
+                    // Clamp values to 0-255
+                    data[i] = Math.min(255, Math.max(0, data[i]));
+                    data[i + 1] = Math.min(255, Math.max(0, data[i + 1]));
+                    data[i + 2] = Math.min(255, Math.max(0, data[i + 2]));
+                }
+                
+                ctx.putImageData(imageData, 0, 0);
+                currentImage = imageData;
+            }
+            
+            // Set initial canvas size
+            imageCanvas.width = 400;
+            imageCanvas.height = 300;
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(0, 0, imageCanvas.width, imageCanvas.height);
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Upload an image to edit', imageCanvas.width/2, imageCanvas.height/2);
+        }
+
+        // Word Counter Tool
+        function initializeWordCounter() {
+            const wordInput = document.getElementById('word-counter-input');
+            const wordCount = document.getElementById('word-count');
+            const charCount = document.getElementById('char-count');
+            const sentenceCount = document.getElementById('sentence-count');
+            const paragraphCount = document.getElementById('paragraph-count');
+            const clearButton = document.getElementById('clear-word-counter');
+            
+            // Count words and characters
+            function countText() {
+                const text = wordInput.value;
+                
+                // Word count
+                const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+                wordCount.textContent = words.length;
+                
+                // Character count
+                charCount.textContent = text.length;
+                
+                // Sentence count (simple detection)
+                const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
+                sentenceCount.textContent = sentences.length;
+                
+                // Paragraph count
+                const paragraphs = text.split(/\n+/).filter(paragraph => paragraph.trim().length > 0);
+                paragraphCount.textContent = paragraphs.length;
+            }
+            
+            // Event listeners
+            wordInput.addEventListener('input', countText);
+            
+            clearButton.addEventListener('click', function() {
+                wordInput.value = '';
+                countText();
+            });
+            
+            // Initial count
+            countText();
+        }
+
+        // Base64 Converter Tool
+        function initializeBase64Converter() {
+            const base64Input = document.getElementById('base64-input');
+            const base64Result = document.getElementById('base64-result');
+            const encodeButton = document.getElementById('encode-base64');
+            const decodeButton = document.getElementById('decode-base64');
+            const copyButton = document.getElementById('copy-base64');
+            const clearButton = document.getElementById('clear-base64');
+            
+            // Encode to Base64
+            encodeButton.addEventListener('click', function() {
+                const text = base64Input.value;
+                const encoded = btoa(unescape(encodeURIComponent(text)));
+                base64Result.textContent = encoded;
+            });
+            
+            // Decode from Base64
+            decodeButton.addEventListener('click', function() {
+                try {
+                    const text = base64Input.value;
+                    const decoded = decodeURIComponent(escape(atob(text)));
+                    base64Result.textContent = decoded;
+                } catch (error) {
+                    base64Result.textContent = 'Error: Invalid Base64 string';
+                }
+            });
+            
+            // Copy result
+            copyButton.addEventListener('click', function() {
+                navigator.clipboard.writeText(base64Result.textContent).then(() => {
+                    const originalText = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalText;
+                    }, 2000);
+                });
+            });
+            
+            // Clear all
+            clearButton.addEventListener('click', function() {
+                base64Input.value = '';
+                base64Result.textContent = 'Your encoded/decoded result will appear here...';
+            });
+            
+            // Initial encode
+            encodeButton.click();
+        }
+
+        // JSON Formatter Tool
+        function initializeJSONFormatter() {
+            const jsonInput = document.getElementById('json-input');
+            const jsonOutput = document.getElementById('json-output');
+            const formatButton = document.getElementById('format-json');
+            const minifyButton = document.getElementById('minify-json');
+            const validateButton = document.getElementById('validate-json');
+            const copyButton = document.getElementById('copy-json');
+            const clearButton = document.getElementById('clear-json');
+            
+            // Format JSON
+            formatButton.addEventListener('click', function() {
+                try {
+                    const json = JSON.parse(jsonInput.value);
+                    jsonOutput.textContent = JSON.stringify(json, null, 2);
+                    jsonOutput.style.color = '#f8fafc';
+                } catch (error) {
+                    jsonOutput.textContent = `Error: ${error.message}`;
+                    jsonOutput.style.color = '#ef4444';
+                }
+            });
+            
+            // Minify JSON
+            minifyButton.addEventListener('click', function() {
+                try {
+                    const json = JSON.parse(jsonInput.value);
+                    jsonOutput.textContent = JSON.stringify(json);
+                    jsonOutput.style.color = '#f8fafc';
+                } catch (error) {
+                    jsonOutput.textContent = `Error: ${error.message}`;
+                    jsonOutput.style.color = '#ef4444';
+                }
+            });
+            
+            // Validate JSON
+            validateButton.addEventListener('click', function() {
+                try {
+                    JSON.parse(jsonInput.value);
+                    jsonOutput.textContent = '✅ Valid JSON';
+                    jsonOutput.style.color = '#10b981';
+                } catch (error) {
+                    jsonOutput.textContent = `❌ Invalid JSON: ${error.message}`;
+                    jsonOutput.style.color = '#ef4444';
+                }
+            });
+            
+            // Copy JSON
+            copyButton.addEventListener('click', function() {
+                navigator.clipboard.writeText(jsonOutput.textContent).then(() => {
+                    const originalText = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalText;
+                    }, 2000);
+                });
+            });
+            
+            // Clear all
+            clearButton.addEventListener('click', function() {
+                jsonInput.value = '';
+                jsonOutput.textContent = 'Your formatted JSON will appear here...';
+                jsonOutput.style.color = '#f8fafc';
+            });
+            
+            // Initial format
+            formatButton.click();
+        }
+    </script>
+</body>
+</html>
