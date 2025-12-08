@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kingbothara4-tech.github.io/trendingtools/sitemap.xml
+Sitemap:  https://www.gagetstore.in/sitemap.xml
