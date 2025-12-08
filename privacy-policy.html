@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TrendingTools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --glow: rgba(99, 102, 241, 0.5);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 25px 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .legal-header {
+            text-align: center;
+            padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .legal-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .light-effect {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .light-effect-2 {
+            left: -250px;
+            bottom: -250px;
+            top: auto;
+            right: auto;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
+        }
+
+        .legal-content {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 50px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .legal-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+
+        .legal-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 15px 0 15px 30px;
+            color: var(--gray);
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: rgba(15, 23, 42, 0.7);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .legal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tools"></i>
+                <span>TrendingTools</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tools">All Tools</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="light-effect"></div>
+        <div class="light-effect light-effect-2"></div>
+        
+        <section class="legal-header">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>Last Updated: December 2023</p>
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </section>
+
+        <section class="legal-content container">
+            <div class="legal-section">
+                <h2>Introduction</h2>
+                <p>Welcome to TrendingTools. We are committed to protecting your privacy and ensuring the security of any information you provide while using our services. This Privacy Policy explains how we handle information on our website.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> TrendingTools operates as a client-side only application. All tools and features run entirely in your browser, and we do not collect, store, or process any personal data.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Information We Do Not Collect</h2>
+                <p>Since TrendingTools is a client-side application:</p>
+                <ul>
+                    <li><strong>No Personal Information:</strong> We do not collect names, email addresses, phone numbers, or any personally identifiable information.</li>
+                    <li><strong>No Usage Data:</strong> We do not track your usage patterns, browsing history, or tool preferences.</li>
+                    <li><strong>No Location Data:</strong> We do not collect or store your geographical location or IP address.</li>
+                    <li><strong>No Cookies for Tracking:</strong> We do not use cookies for tracking purposes (see our Cookie Policy for details).</li>
+                    <li><strong>No Data Storage:</strong> All tool operations happen in your browser. We don't store any data on our servers.</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Third-Party Services</h2>
+                <h3>Hosting Provider</h3>
+                <p>Our website is hosted on GitHub Pages. GitHub may collect certain technical information such as IP addresses for security and operational purposes. Please refer to GitHub's Privacy Policy for more information.</p>
+                
+                <h3>Font and Icon Services</h3>
+                <p>We use Google Fonts and Font Awesome for typography and icons. These services may collect limited data about font usage. You can review their privacy policies:</p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                    <li><a href="https://fontawesome.com/privacy" target="_blank">Font Awesome Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Your Rights</h2>
+                <p>Since we don't collect personal data, you have no data to request access to, correct, or delete. However, you have the right to:</p>
+                <ol>
+                    <li>Use our tools anonymously without providing any personal information</li>
+                    <li>Disable JavaScript in your browser (though this will break functionality)</li>
+                    <li>Clear your browser's local storage and cache at any time</li>
+                    <li>Use browser extensions to block third-party requests</li>
+                </ol>
+            </div>
+
+            <div class="legal-section">
+                <h2>Children's Privacy</h2>
+                <p>Our services are suitable for users of all ages. Since we don't collect personal information, we are fully compliant with children's privacy regulations including COPPA.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Data Security</h2>
+                <p>While we implement security best practices in our code, the ultimate security of your data depends on:</p>
+                <ul>
+                    <li>Your browser's security settings</li>
+                    <li>Your device's security measures</li>
+                    <li>Your network security</li>
+                </ul>
+                <p>We recommend keeping your browser updated and using security extensions for optimal protection.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by:</p>
+                <ul>
+                    <li>Updating the "Last Updated" date at the top of this policy</li>
+                    <li>Posting a notice on our website</li>
+                </ul>
+                <p>We encourage you to review this Privacy Policy periodically.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Contact Information</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us through our <a href="contact-us.html">Contact Us</a> page.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TrendingTools</h3>
+                    <p>A collection of 10 essential free online tools that work directly in your browser. No accounts required, no data stored, completely private.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="acceptable-use-policy.html">Acceptable Use Policy</a></li>
+                        <li><a href="copyright-information.html">Copyright Information</a></li>
+                        <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>All Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#text-case">Text Case Converter</a></li>
+                        <li><a href="index.html#password-generator">Password Generator</a></li>
+                        <li><a href="index.html#unit-converter">Unit Converter</a></li>
+                        <li><a href="index.html#qr-generator">QR Code Generator</a></li>
+                        <li><a href="index.html#color-picker">Color Picker</a></li>
+                        <li><a href="index.html#calculator">Advanced Calculator</a></li>
+                        <li><a href="index.html#image-editor">Image Editor</a></li>
+                        <li><a href="index.html#word-counter">Word Counter</a></li>
+                        <li><a href="index.html#base64-converter">Base64 Converter</a></li>
+                        <li><a href="index.html#json-formatter">JSON Formatter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TrendingTools. All rights reserved. | This site is free to use and does not collect or store any user data.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.copyright p');
+            copyrightElements.forEach(el => {
+                el.innerHTML = el.innerHTML.replace('2023', year);
+            });
+        });
+    </script>
+</body>
+</html>
