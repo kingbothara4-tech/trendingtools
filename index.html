@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trending Tools - 10 Essential Free Online Tools</title>
+    <title>TrendingTools - essential Free Online Tools</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -632,7 +632,7 @@
         
         <section class="hero">
             <div class="container">
-                <h1>Essential Tools for Everyday Use</h1>
+                <h1>10 Essential Tools for Everyday Use</h1>
                 <p>Free, fast, and easy-to-use online tools that work directly in your browser. No accounts, no downloads, no backend required.</p>
             </div>
         </section>
@@ -1276,11 +1276,27 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>TrendingTools</h3>
-                    <p>A collection of 10 essential free online tools that work directly in your browser. No accounts required, no data stored, completely private.</p>
+                    <p>A collection of essential free online tools that work directly in your browser. No accounts required, no data stored, completely private.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Legal Pages</h3>
+                    <h3>All Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-tool="text-case">Text Case Converter</a></li>
+                        <li><a href="#" data-tool="password-generator">Password Generator</a></li>
+                        <li><a href="#" data-tool="unit-converter">Unit Converter</a></li>
+                        <li><a href="#" data-tool="qr-generator">QR Code Generator</a></li>
+                        <li><a href="#" data-tool="color-picker">Color Picker</a></li>
+                        <li><a href="#" data-tool="calculator">Advanced Calculator</a></li>
+                        <li><a href="#" data-tool="image-editor">Image Editor</a></li>
+                        <li><a href="#" data-tool="word-counter">Word Counter</a></li>
+                        <li><a href="#" data-tool="base64-converter">Base64 Converter</a></li>
+                        <li><a href="#" data-tool="json-formatter">JSON Formatter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal & Policies</h3>
                     <ul class="footer-links">
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
@@ -1291,23 +1307,6 @@
                         <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>All Tools</h3>
-      <ul class="footer-links">
-    <li><a href="index.html#text-case">Text Case Converter</a></li>
-    <li><a href="index.html#password-generator">Password Generator</a></li>
-    <li><a href="index.html#unit-converter">Unit Converter</a></li>
-    <li><a href="index.html#qr-generator">QR Code Generator</a></li>
-    <li><a href="index.html#color-picker">Color Picker</a></li>
-    <li><a href="index.html#calculator">Advanced Calculator</a></li>
-    <li><a href="index.html#image-editor">Image Editor</a></li>
-    <li><a href="index.html#word-counter">Word Counter</a></li>
-    <li><a href="index.html#base64-converter">Base64 Converter</a></li>
-    <li><a href="index.html#json-formatter">JSON Formatter</a></li>
-</ul>
-
                 </div>
             </div>
             
@@ -1378,6 +1377,13 @@
             backButtons.forEach(button => {
                 button.addEventListener('click', showHomePage);
             });
+            
+            // Check URL hash on page load
+            const hash = window.location.hash;
+            if (hash) {
+                const toolId = hash.substring(1); // Remove the # character
+                showToolPage(toolId);
+            }
             
             // Initialize all tools
             initializeTextCaseConverter();
