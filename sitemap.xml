@@ -1,57 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://www.gagetstore.in/</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
+
   <url>
-    <loc>https://www.gagetstore.in/contact-us.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.gagetstore.in/pdfconverter.html</loc>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://www.gagetstore.in/privacy-policy.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://www.gagetstore.in/terms-of-service.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://www.gagetstore.in/cookie-policy.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
-  <url>
-    <loc>https://www.gagetstore.in/acceptable-use-policy.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.gagetstore.in/data-processing-agreement.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
   <url>
     <loc>https://www.gagetstore.in/disclaimer.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
+
+  <url>
+    <loc>https://www.gagetstore.in/acceptable-use-policy.html</loc>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
   <url>
     <loc>https://www.gagetstore.in/copyright-information.html</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
+
+  <url>
+    <loc>https://www.gagetstore.in/data-processing-agreement.html</loc>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.gagetstore.in/contact-us.html</loc>
+    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
