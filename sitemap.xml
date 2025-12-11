@@ -3,69 +3,74 @@
 
   <url>
     <loc>https://www.gagetstore.in/</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>1.00</priority>
   </url>
-  
- <url>
+
+  <url>
     <loc>https://www.gagetstore.in/articles.html</loc>
-    <lastmod>2025-12-10T07:42:22+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
-  
+
   <url>
     <loc>https://www.gagetstore.in/pdfconverter.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/privacy-policy.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/terms-of-service.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/cookie-policy.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/disclaimer.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/acceptable-use-policy.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/copyright-information.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/data-processing-agreement.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/contact-us.html</loc>
-    <lastmod>2025-12-09T06:26:19+00:00</lastmod>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
-</urlset>
+  <url>
+    <loc>https://www.gagetstore.in/fed-live-december-2025.html</loc>
+    <lastmod>2025-12-11T06:15:03+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
 
+</urlset>
