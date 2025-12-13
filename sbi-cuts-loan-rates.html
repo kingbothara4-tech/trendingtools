@@ -67,6 +67,32 @@
             padding: 60px 0 40px;
             position: relative;
         }
+        .article-badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .breaking-badge {
+            background: linear-gradient(to right, #dc2626, #ef4444);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .category-badge {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+        }
         .article-hero h1 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -152,6 +178,49 @@
             margin-right: 5px;
         }
 
+        /* Related Articles */
+        .related-articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .related-card {
+            display: block;
+            padding: 20px;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            position: relative;
+            padding-bottom: 50px;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(30, 41, 59, 0.8);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .related-card h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .related-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: absolute;
+            bottom: 20px;
+        }
+
         /* Footer */
         footer { background: rgba(15, 23, 42, 0.9); padding: 60px 0 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
@@ -168,6 +237,7 @@
             .article-hero h1 { font-size: 2.2rem; }
             .article-body { padding: 25px; }
             .article-image { height: 250px; }
+            .related-articles { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -195,8 +265,12 @@
     <!-- Article Hero -->
     <section class="article-hero">
         <div class="container">
+            <div class="article-badges">
+                <span class="breaking-badge">Breaking News</span>
+                <span class="category-badge">Trade & Economy</span>
+            </div>
             <h1>SBI Cuts Loan Rates! 🎉 Cheaper EMI for Home & Car Loans</h1>
-            <p class="article-meta"><strong>Published:</strong> December 13, 2025 | <strong>Category:</strong> Finance News</p>
+            <p class="article-meta"><strong>Published:</strong> December 13, 2025</p>
             
             <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                  alt="SBI Bank building with happy customers" 
@@ -278,6 +352,26 @@
                 <p>The SBI lending rate cut is a direct benefit for common people. It puts more money back in your pocket every month. It also helps the economy by making it easier for people to buy homes and cars.</p>
                 <p>Remember, other banks might also cut their rates soon. Keep an eye on the news for more updates!</p>
             </div>
+
+            <!-- Related Articles Section -->
+            <div class="article-section">
+                <h2>📚 You May Also Like</h2>
+                <p>Check out these other helpful articles:</p>
+                
+                <div class="related-articles">
+                    <a href="https://www.gagetstore.in/fed-live-december-2025.html" class="related-card" target="_blank">
+                        <h4>FED Live Update – December 2025</h4>
+                        <p>Full coverage of FED decisions, interest rate changes, and market reactions for December 2025.</p>
+                        <span class="read-more">Read Article →</span>
+                    </a>
+                    
+                    <a href="https://www.gagetstore.in/mexico-india-tariffs-2026.html" class="related-card" target="_blank">
+                        <h4>Mexico Tariffs India - January 2026 Impact</h4>
+                        <p>Simple explanation of Mexico's new taxes on Indian goods and how it affects prices, jobs, and trade.</p>
+                        <span class="read-more">Read Article →</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -297,7 +391,10 @@
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
                         <li><a href="cookie-policy.html">Cookie Policy</a></li>
                         <li><a href="disclaimer.html">Disclaimer</a></li>
-                    </ul>
+                        <li><a href="acceptable-use-policy.html">Acceptable Use Policy</a></li>
+                        <li><a href="copyright-information.html">Copyright Information</a></li>
+                        <li><a href="data-processing-agreement.html">Data Processing Agreement</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
                 </div>
 
                 <div class="footer-section">
