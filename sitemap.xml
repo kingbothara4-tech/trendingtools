@@ -3,106 +3,114 @@
 
   <url>
     <loc>https://www.gagetstore.in/</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/articles.html</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/pdfconverter.html</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <priority>0.8</priority>
   </url>
 
+  <!-- Legal / Trust Pages -->
+
   <url>
     <loc>https://www.gagetstore.in/privacy-policy.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/terms-of-service.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/cookie-policy.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/disclaimer.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/acceptable-use-policy.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/copyright-information.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/data-processing-agreement.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/contact-us.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.6</priority>
   </url>
 
   <!-- Articles -->
 
   <url>
+    <loc>https://www.gagetstore.in/ai-tools-helping-grow-businesses.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.gagetstore.in/itc-share-falling-today-stock-market-live-2026.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/corona-remedies-share-price.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/fd-to-gold-silver-2025.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/sbi-cuts-loan-rates.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/fed-live-december-2025.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.gagetstore.in/mexico-india-tariffs-2026.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <priority>0.64</priority>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
